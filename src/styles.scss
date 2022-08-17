@@ -1,0 +1,79 @@
+@import "color-palette";
+
+body {
+  height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  line-height: 1.5;
+  background: $main-bg-color;
+}
+
+.icon-info {
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.main {
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #classify-input {
+    width: 400px;
+    height: 20px;
+    padding: 10px;
+    outline: none;
+    background-color: $off-white;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  #classify-btn {
+    width: 137px;
+    height: 42px;
+    margin-left: 35px;
+    background-color: $off-white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange-light;
+    }
+
+    &:active {
+      background-color: $orange-bright;
+    }
+  }
+}
+
+.message, .classification-time-analysis {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: $off-white;
+}
+
+.message {
+  top: 53%;
+  left: 0;
+  margin-top: 30px;
+}
+
+.classification-time-analysis {
+  bottom: 3%;
+  left: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+}
