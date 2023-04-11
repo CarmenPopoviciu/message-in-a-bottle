@@ -33,8 +33,11 @@ export async function onRequest(context) {
     console.log("⏳ Loading model...");
     try{
       tfjsModel = await toxicity.load();
+      console.log("Model load complete", tfjsModel);
       labels = tfjsModel.model.outputNodes.map((d) => d.split('/')[0]);
+      console.log(`Extracted labels: ${labels}`);
     } catch(err) {
+      console.log("Error", err);
       return new Response(err)
     }
   }
